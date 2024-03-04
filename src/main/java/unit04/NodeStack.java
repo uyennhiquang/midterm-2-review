@@ -54,6 +54,7 @@ public class NodeStack<E> implements Stack<E> {
         return null;
     }
 
+    @Override
     public String toString(){
         if(this.top != null){
             return "Stack: " + this.top.toString() + 
@@ -63,5 +64,10 @@ public class NodeStack<E> implements Stack<E> {
             return "Stack: null" + 
                    "\nSize: " + this.size + "\n";
         }
+    }
+
+    @Override
+    public NodeIterator<E> iterator() {
+        return new NodeIterator<>(this.top);
     }
 }
