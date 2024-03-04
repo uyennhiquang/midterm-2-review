@@ -9,6 +9,11 @@ public class Student implements Comparable<Student>{
     this.gpa = gpa;
   }
 
+  @Override
+  public String toString() {
+    return this.name + ": " + this.gpa;
+  }
+
   public String getName() {
     return this.name;
   }
@@ -28,7 +33,7 @@ public class Student implements Comparable<Student>{
 
   @Override
   public int compareTo(Student other) {
-    return (Float.compare(this.gpa, other.gpa) != 0) ? Float.compare(this.gpa, other.gpa) : this.name.compareTo(other.name);
+    return (Float.compare(this.gpa, other.gpa) != 0) ? (Float.compare(this.gpa, other.gpa) * -1) : this.name.compareTo(other.name);
   }
   
 }
