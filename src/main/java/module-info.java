@@ -6,5 +6,6 @@ module unit04 {
 
     opens unit04 to javafx.fxml;
     exports unit04;
+    exports unit04.basic_calculator;
 
 }
